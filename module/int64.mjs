@@ -131,3 +131,24 @@ export class Int {
         return '0x' + high + '_' + low;
     }
 }
+{
+  public static final int SIZE = 8;
+
+  public Int64() {
+    super(SIZE);
+  }
+
+  public Int64(long value) {
+    this();
+    set(value);
+  }
+
+  public long get() {
+    return getLong(0x00);
+  }
+
+  public void set(long value) {
+    putLong(0x00, value);
+  }
+}
+
